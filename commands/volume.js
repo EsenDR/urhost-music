@@ -7,7 +7,7 @@ module.exports = {
     {
       name: 'volume',
       type: 4, // 'INTEGER' Type
-      description: 'Number between 0-200',
+      description: 'Number between 0-300',
       required: true,
     },
   ],
@@ -38,7 +38,7 @@ module.exports = {
 
     var volume = interaction.options.get('volume').value;
     volume = Math.max(0, volume);
-    volume = Math.min(200, volume);
+    volume = Math.min(300, volume);
     const success = queue.setVolume(volume);
 
     return void interaction.followUp({

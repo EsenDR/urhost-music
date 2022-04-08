@@ -1,23 +1,23 @@
 module.exports = {
   name: "hug",
-  description: "Used to hug someone",
+  description: "Spread the love.",
   options: [
     {
-      name: 'input',
-      description: 'User to hug',
+      name: 'username',
+      description: 'Type in the name of the user you want to send a hug to.',
       type: 6,
       required: true,
     },
   ],
 
   execute(message) {
-    let user = message.options.getUser('input');
+    let user = message.options.getUser('username');
     let hugger = message.user.id;
 
     let hugEmbed = {
-      title: `Get Hugged!`,
+      title: `**SENDING THE LOVE**`,
       description: `<@${hugger}> sends their love to ${user}!`,
-      color: 0x7289da,
+      color: 0xebb01a,
       image: {
         url: 'https://i.pinimg.com/originals/f2/80/5f/f2805f274471676c96aff2bc9fbedd70.gif',
       },

@@ -17,3 +17,32 @@ module.exports = {
       .catch(console.error);
   }
 };
+
+module.exports = {
+  name: "uptime",
+  description: "Check the uptime",
+
+  execute(message) {
+    let seconds = Math.floor(message.client.uptime / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
+    let days = Math.floor(hours / 24);
+
+    seconds %= 60;
+    minutes %= 60;
+    hours %= 24;
+
+    let uptimeEmbed = {
+      title: `**AYO! Someone cut the cord so I can go to sleep**`,
+      description: `Uptime: \`${days} day(s), ${hours} hours, ${minutes} minutes, ${seconds} seconds\``,
+      color: 0xebb01a,
+      image: {
+        url: 'https://media3.giphy.com/media/RTIGQQZwkGy9q/giphy.gif',
+      },
+    }
+
+    return message
+      .reply({embeds: [uptimeEmbed]})
+      .catch(console.error);
+  },
+}
