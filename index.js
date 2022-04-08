@@ -73,7 +73,7 @@ client.on('messageCreate', async message => {
         message.reply('Deployed!');
       })
       .catch(err => {
-        message.reply('Could not deploy commands! Make sure the bot has the application.commands permission!');
+        message.reply('Missing application.commands permissions on my invite.');
         console.error(err);
       });
   }
@@ -91,7 +91,7 @@ client.on('interactionCreate', async interaction => {
   } catch (error) {
     console.error(error);
     interaction.followUp({
-      content: 'There was an error trying to execute that command!',
+      content: 'Whoops the fragile api broke.',
     });
   }
 });
