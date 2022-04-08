@@ -1,19 +1,19 @@
 {
-  "name": "music-bot",
+  "name": "urhost-music",
   "version": "1.0.0",
-  "repository": "https://github.com/TannerGabriel/discord-music-bot.git",
-  "description": "A simple discord music bot",
+  "repository": "https://github.com/TeamURHOST/urhost-music.git",
+  "description": "A modern version of yamb",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "prettier --write \"**/*.js\""
   },
   "keywords": [
-    "discord",
+    "urhost",
     "music",
     "bot"
   ],
-  "author": "Gabriel Tanner",
+  "author": "URHOST Music",
   "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
